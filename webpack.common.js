@@ -17,7 +17,7 @@ module.exports = {
 	output: {
 		filename: 'scripts/[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath:"/"
+		publicPath:"./"
 	},
 	resolve: {
 		extensions: ['.js', '.pug', '.json'],
@@ -87,27 +87,24 @@ module.exports = {
 	},
 	plugins: [
 		new CopyWebpackPlugin([
-			{ from: './src/scripts/vendor', to: './scripts/vendor' },
-			{ from: './src/styles/vendor', to:'./styles/vendor'},
 			{ from: './src/lib', to:'./lib'},
 		]),
-		new webpack.ProvidePlugin({
-            $: "jquery",
-			jQuery: "jquery"
-        }),
+		// new webpack.ProvidePlugin({
+        //     $: "jquery",
+		// 	jQuery: "jquery"
+        // }),
 		new ExtractTextPlugin({
 			filename: "styles/style.bundle.css"
 		}), 
+		// new HtmlWebpackPlugin({
+		// 	hash: false,
+		// 	template: './src/template/index.pug',
+		// 	filename:  'index.html',
+		// }),
 		new HtmlWebpackPlugin({
 			hash: false,
-			template: './src/template/index.pug',
-			filename:  'index.html',
-			minify:false,
+			template: './src/template/pages/index.pug',
+			filename: 'index.html',
 		}),
-		new HtmlWebpackPlugin({
-			hash: true,
-			template: './src/template/home.pug',
-			filename:  'home.html'
-		})
     ]
 };
