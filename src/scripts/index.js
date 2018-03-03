@@ -1,7 +1,7 @@
 import '../styles/index.scss';
 
 var slick = $(".wrap-slider-news__slider-container").slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 4,
     dots: false,
     arrows:false,
@@ -34,8 +34,12 @@ $(".wrap-slider-news__button-icon").on("click" , function(){
     }
 });
 
-$(".wrap-slider-news__slider-item-container").on("click",function(){
+$(".wrap-slider-news__slider-image-container , .wrap-slider-news__slider-description").on("click",function(){
     var id = $(this).attr("data-id");
     $(".wrap-slider-news__news-detail-container").hide();
     $(".wrap-slider-news__news-detail-container[data-id='" + id +"'] ").show();
+    
+    //active item
+    $(".wrap-slider-news__slider-item-container").removeClass("active");
+    $(this).closest(".wrap-slider-news__slider-item-container").addClass("active");
 })

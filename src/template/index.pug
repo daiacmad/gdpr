@@ -13,7 +13,7 @@ html(lang="en")
     link(rel="stylesheet" href="./lib/slick-1.8.0/slick/slick-theme.css")
 
   //- body
-  body
+  body.home-page
     div.wrap-banner
         img.wrap-banner__image(src="../assets/images/banner.jpg")
         div.wrap-banner__container.container
@@ -44,16 +44,15 @@ html(lang="en")
                     - var n = 0;
                     while n < 5
                         div.wrap-slider-news__slider-item.col-xs-12
-                            div.wrap-slider-news__slider-image-container
-                              div.wrap-slider-news__slider-item-container(data-id=n)
-                                div.wrap-slider-news__slider-image-container
-                                    img.wrap-slider-news__slider-image(src="../assets/images/news.jpg")
-                                div.wrap-slider-news__slider-content
-                                    div.wrap-slider-news__slider-date 
-                                        i.fa.fa-calendar-o 
-                                        | Feb 24, 2018
-                                    div.wrap-slider-news__slider-description(data-id=n)
-                                        | Artificial Intelligence Special Focus - Expertise Provided by Fusionex
+                            div.wrap-slider-news__slider-item-container
+                              div.wrap-slider-news__slider-image-container(data-id=n)
+                                  img.wrap-slider-news__slider-image(src="../assets/images/news.jpg")
+                              div.wrap-slider-news__slider-content
+                                  div.wrap-slider-news__slider-date 
+                                      i.fa.fa-calendar-o 
+                                      | Feb 24, 2018
+                                  div.wrap-slider-news__slider-description(data-id=n)
+                                      | Artificial Intelligence Special Focus - Expertise Provided by Fusionex
                             
                         //- count up 
                         - n++
