@@ -18,7 +18,8 @@
 }
 .wrap-banner{
     position: relative;
-
+    overflow: hidden;
+    width:100%;
     &__image{
         min-width:100%;
         max-height:100%;
