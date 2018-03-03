@@ -14,8 +14,92 @@ html(lang="en")
 
   //- body
   body
-    block content 
-    
+    div.wrap-banner
+        img.wrap-banner__image(src="../assets/images/banner.jpg")
+        div.wrap-banner__container.container
+            div.wrap-banner__wrap-logo
+                img.wrap-banner__logo(src="../assets/images/logo.png")
+            
+            div.wrap-banner__wrap-content
+                div.wrap-banner__title A BIG TITLE OVER HERE
+                div.wrap-banner__content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                div.wrap-banner__wrap-button
+                    a.wrap-banner__button.btn.btn-md(href="#" data-toggle="modal" data-target="#myModal") TAKE ME TO SURVEY
+    div.wrap-slider-news
+        div.container
+            div.wrap-slider-news__title
+                div.wrap-slider-news__icon-wrap
+                    img.wrap-slider-news__icon(src="../assets/images/light-icon.jpg")
+                div.wrap-slider-news__text News & Trending
+
+                div.wrap-slider-news__button
+                    div.wrap-slider-news__button-icon
+                        i.fa.fa-angle-left
+                    div.wrap-slider-news__button-icon
+                        i.fa.fa-angle-right
+
+            div.row
+                div.wrap-slider-news__slider-container
+                    //- start loop
+                    - var n = 0;
+                    while n < 5
+                        div.wrap-slider-news__slider-item.col-xs-12
+                            div.wrap-slider-news__slider-image-container
+                              div.wrap-slider-news__slider-item-container(data-id=n)
+                                div.wrap-slider-news__slider-image-container
+                                    img.wrap-slider-news__slider-image(src="../assets/images/news.jpg")
+                                div.wrap-slider-news__slider-content
+                                    div.wrap-slider-news__slider-date 
+                                        i.fa.fa-calendar-o 
+                                        | Feb 24, 2018
+                                    div.wrap-slider-news__slider-description(data-id=n)
+                                        | Artificial Intelligence Special Focus - Expertise Provided by Fusionex
+                            
+                        //- count up 
+                        - n++
+                
+                div.wrap-slider-news__box-shadow
+                    img.wrap-slider-news__box-shadow-image(src="../assets/images/box-shadow.png")
+
+            div.row
+                //- start loop
+                - var n = 0;
+                while n < 5
+                    div.col-xs-12.wrap-slider-news__news-detail-container(data-id=n)
+                        div.wrap-slider-news__news-detail-title 
+                            | #{n}
+                            | Ransomware as a Service – Now Everyone Can Start a Cyber Criminal Business – Trend Micro 2018 Predictions
+                        div.wrap-slider-news__news-detail-date 
+                            i.fa.fa-calendar-o 
+                            | Jan 26, 2018
+                        div.wrap-slider-news__news-detail-content 
+                            p CSA was pleased to attend a media briefing session in Kuala Lumpur yesterday evening where the local Trend Micro leadership gave us their cybersecurity predictions for 2018. Malaysia Managing Director, Mr Goh Chee Hoh, gave us a deep introduction to Trend Micro globally and some insight into the Malaysia business he runs, then Malaysia Technical Sales Specialist, Law Chee Wan, dived in and revealed Trend’s predictions for 2018.
+                            p Unsurprisingly, ransomware featured as one of their main predictions. Law highlighted a few key reasons why ransomware is going to become a bigger problem than ever in 2018. Ransomware attackers will increasingly leverage known and as yet unknown vulnerabilities to increase the veracity of ransomware attacks. Gone are the days where a user needs to send infected files to another user for it to spread. Ransomware will look to exploit vulnerabilities in order to intelligently find ways to spread, and as Law pointed out by highlighting some of the famous examples from 2017, “ransomware really does spread like wildfire”. According to Trend, we can expect this to happen more in 2018.
+                            p Earlier, Mr Goh had explained that cyber criminals only ever have one of three aims, “They either want to sell your information, ransom you or hijack your machines to do crime.” He might have added that there are some out there that want to create havoc just for the fun of it – but that’s just our view (ed).
+                            p Law then explained other factors that are adding together to ensure that ransomware really will be an increasing threat over the next 12 months. No big surprise here, but Bitcoin raised its head with Law explaining that the anonymity that Bitcoin allows, means that cyber criminals are able to collect ransom fees without fear of getting caught or traced. As long as this remains the case, it makes it easy for people to collect cyber ransoms.
+                            p Perhaps more surprising was that Law highlighted GDPR (the European Data Protection Laws) that come into effect as another incentive that will keep ransomware criminals active. European companies or companies that do business in Europe can face enormous fines if they get breached, especially if they do not report or solve the breach within a given time period. Law pointed out that the pressure of these large fines may cause companies to pay bigger ransoms under threat of the cybercriminal publicising the breach and risking an even bigger fine from the European Union.
+                    //- count up  
+                    - n++
+    div.footer
+        div.footer__image-container
+            img.footer__image(src="../assets/images/background-footer.jpg")
+
+        div.footer__content-container
+            div.footer__content Copyright © 2018 GDPRASEAN. All rights reserved
+
+    //- Modal
+    div#myModal.modal.fade(role="dialog")
+      div.modal-dialog
+        //- Modal content-->
+        div.modal-content
+          div.modal-header
+            button.close(type="button" data-dismiss="modal") &times;
+            h4.modal-title Sample Survey
+          div.modal-body
+            <script>(function(t,e,s,n){var o,a,c;t.SMCX=t.SMCX||[],e.getElementById(n)||(o=e.getElementsByTagName(s),a=o[o.length-1],c=e.createElement(s),c.type="text/javascript",c.async=!0,c.id=n,c.src=["https:"===location.protocol?"https://":"http://","widget.surveymonkey.com/collect/website/js/tRaiETqnLgj758hTBazgd1Vo698qnnSuqSgJIuHgJGKJfJ0larLCvi8QAfC2PvVs.js"].join(""),a.parentNode.insertBefore(c,a))})(window,document,"script","smcx-sdk");</script><a style="font: 12px Helvetica, sans-serif; color: #999; text-decoration: none;" href=https://www.surveymonkey.com> Create your own user feedback survey </a>
+          div.modal-footer
+            button.btn.btn-default(type="button" data-dismiss="modal") Close
+
     //- jquery
     script(src="./lib/jquery/jquery.min.js")
     //- bootstrap

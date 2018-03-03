@@ -11,7 +11,7 @@ function resolve (dir) {
 
 module.exports = {
   	entry:{
-		  script :  './src/scripts/index.js',
+		script :  './src/scripts/index.js',
   	},
   	devtool : "eval",
 	output: {
@@ -103,7 +103,7 @@ module.exports = {
 		// }),
 		new HtmlWebpackPlugin({
 			hash: false,
-			template: './src/template/pages/index.pug',
+			template: './src/template/index.pug',
 			filename: 'index.html',
 		}),
     ]
