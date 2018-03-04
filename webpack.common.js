@@ -6,9 +6,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 function resolve (dir) {
-	return path.join(__dirname, '..', dir)
+	return path.join(__dirname, '.', dir)
 }
 
+console.log(process.env.NODE_ENV )
 module.exports = {
   	entry:{
 		script :  './src/scripts/index.js',
@@ -17,12 +18,13 @@ module.exports = {
 	output: {
 		filename: 'scripts/[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath:"./"
+		publicPath: "/"
 	},
 	resolve: {
 		extensions: ['.js', '.pug', '.json'],
 		alias: {
-		  '@': resolve('src'),
+		  	'src': resolve('src'),
+			'assets': resolve('src/assets')
 		}
 	  },
 	module: {
