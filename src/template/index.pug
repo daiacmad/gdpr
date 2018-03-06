@@ -60,7 +60,7 @@ html(lang="en")
                 div.wrap-slider-news__box-shadow
                     img.wrap-slider-news__box-shadow-image(src="~assets/images/box-shadow.png")
 
-            div.row
+            div#loopArticle.row
                 //- start loop
                 - var n = 0;
                 while n < 5
@@ -83,8 +83,10 @@ html(lang="en")
         div.footer__image-container
             img.footer__image(src="~assets/images/background-footer.jpg")
 
-        div.footer__content-container
-            div.footer__content Copyright © 2018 GDPRASEAN. All rights reserved
+        div.footer__content-container.container
+            img(src="~assets/images/glocomp-rgb-full-color.png" style="max-width:150px;margin-right:10px")
+            img(src="~assets/images/netapp-horizontal-colored.png" style="max-width:150px;")
+            //- div.footer__content Copyright © 2018 GDPRASEAN. All rights reserved
 
     //- Modal
     div#myModal.modal.fade(role="dialog")
