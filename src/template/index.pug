@@ -2,7 +2,8 @@ doctype html
 html(lang="en")
   head
     title= pageTitle
-    base(href="/")
+    //- base(href="/")
+    <meta charset="UTF-8">
     meta(name="viewport" content="width=device-width, initial-scale=1")
     //- bootstrap
     link(rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css")
@@ -84,9 +85,9 @@ html(lang="en")
             img.footer__image(src="~assets/images/background-footer.jpg")
 
         div.footer__content-container.container
-            img(src="~assets/images/glocomp-rgb-full-color.png" style="max-width:150px;margin-right:10px")
-            img(src="~assets/images/netapp-horizontal-colored.png" style="max-width:150px;")
-            //- div.footer__content Copyright © 2018 GDPRASEAN. All rights reserved
+            img.footer__content-image(src="~assets/images/netapp-horizontal-colored.png" style="top:-5px;")
+            img.footer__content-image(src="~assets/images/glocomp-rgb-full-color.png" style="margin-right:10px;")
+            div.footer__content Copyright © 2018 GDPRASEAN. All rights reserved
 
     //- Modal
     div#myModal.modal.fade(role="dialog")

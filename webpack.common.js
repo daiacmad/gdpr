@@ -18,7 +18,7 @@ module.exports = {
 	output: {
 		filename: 'scripts/[name].bundle.js',
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: "/"
+		publicPath: "./"
 	},
 	resolve: {
 		extensions: ['.js', '.pug', '.json'],
@@ -63,7 +63,7 @@ module.exports = {
 				loader:'file-loader',
 				options:{
 					name: "[name].[hash].[ext]",
-					outputPath: 'assets/images',
+					outputPath: './assets/images',
 				}
 			},
 			{
@@ -71,7 +71,7 @@ module.exports = {
 				loader: 'file-loader',
 				options:{
 					name: "[name].[hash].[ext]",
-					outputPath: 'assets/media'
+					outputPath: './assets/media'
 				}
 			  },
 			  {
@@ -79,7 +79,8 @@ module.exports = {
 				loader: 'file-loader',
 				options:{
 					name: "[name].[hash].[ext]",
-					outputPath: 'assets/fonts'
+					outputPath: '../assets/fonts',
+					publicPath:"../assets/fonts"
 				}
 			  }
 		]
