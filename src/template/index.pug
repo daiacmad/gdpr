@@ -17,17 +17,23 @@ html(lang="en")
   body.home-page
     div.wrap-banner
         img.wrap-banner__image(src="~assets/images/banner.jpg")
-        div.wrap-banner__container.container
-            div.wrap-banner__wrap-logo
-                img.wrap-banner__logo(src="~assets/images/logo.png")
+        div.wrap-banner__container.container  
             
             div.wrap-banner__wrap-content
-                div.wrap-banner__title A BIG TITLE OVER HERE
-                div.wrap-banner__content Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                div.wrap-banner__wrap-button
-                    a.wrap-banner__button.btn.btn-md(href="#" data-toggle="modal" data-target="#myModal") TAKE ME TO SURVEY
+                div.wrap-banner__wrap-logo
+                    img.wrap-banner__logo(src="~assets/images/logo.png") 
+
+                div
+                    div.wrap-banner__title A BIG TITLE OVER HERE
+                    div.wrap-banner__content
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    div.wrap-banner__wrap-button
+                        a.wrap-banner__button.btn.btn-md(href="#" data-toggle="modal" data-target="#myModal") TAKE ME TO SURVEY
     div.wrap-slider-news
         div.container
+            div.wrap-slider-news__logo
+                | Sponsor by
+                img.wrap-slider-news__logo-image(src="~assets/images/netapp-horizontal-colored.png")
             div.wrap-slider-news__title
                 div.wrap-slider-news__icon-wrap
                     img.wrap-slider-news__icon(src="~assets/images/light-icon.jpg")
